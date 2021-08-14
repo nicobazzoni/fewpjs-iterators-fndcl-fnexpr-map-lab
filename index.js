@@ -1,3 +1,5 @@
+const { ResourceLoader } = require("jsdom")
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -9,9 +11,13 @@ const tutorials = [
   'what is the difference between == and ===?',
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
-];
+]
 
-const titleCased = () => {
+
   // use the .map method on the tutorials to return a new array
-  return tutorials
+  const titleCased = () => {
+    return tutorials.map(function(string){
+      return string.split(" ").map(word => word[0].toUpperCase() + word.substr(1)).join(" ")
+    })
+ 
 }
