@@ -1,4 +1,3 @@
-const { ResourceLoader } = require("jsdom")
 
 const tutorials = [
   'what does the this keyword mean?',
